@@ -1,0 +1,9 @@
+<h1><%= @project.name %> - Tasks</h1>
+<div id="task-board" data-controller="task-board">
+  <% @project.board.tasks.each do |task| %>
+    <div class="task" data-task-id="<%= task.id %>">
+      <h2><%= task.title %></h2>
+      <p><%= task.description %></p>
+    </div>
+  <% end %>
+</div>

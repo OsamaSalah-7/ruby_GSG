@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: postgres
+  password: osama
+# Replace 'your_password' with your PostgreSQL password
+
+development:
+  <<: *default
+  database: proj_development
+
+test:
+  <<: *default
+  database: proj_test
+
+production:
+  <<: *default
+  database: proj_production
+  username: osama # Replace with your production PostgreSQL username
+  password: osama # Replace with your production PostgreSQL password
